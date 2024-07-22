@@ -49,9 +49,9 @@ function App() {
   return (
     <TodoContextProvider value={{ todos, AddTodo, UpdateTodo, DeleteTodo, ToggleComplete }}>
       <div className=" bg-[rgb(66,72,116)] min-h-screen  py-8">
-        <div className="bg-[#A6B1E1] w-full max-w-2xl mx-auto shadow-md rounded-lg px-4 py-3 text-white">
+        <div className="bg-[#A6B1E1] w-full max-w-2xl mx-auto shadow-md rounded-lg px-6 py-4 text-white">
           <div className="flex justify-around items-center mt-2 flex-col">
-            <img src='/LOGO.png' width={"112px"} alt='Logo' />
+            <img src='LOGO.png' width={"112px"} alt='Logo' />
             <h1 className=" text-3xl font-extrabold text-center text-white drop-shadow-xl mb-8 mt-2">Manage Your Todos</h1>
           </div>
           <div className="mb-4">

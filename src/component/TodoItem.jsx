@@ -18,19 +18,19 @@ function TodoItem({ todo }) {
 
   return (
       <div
-          className={`flex border border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-sm shadow-white/50 duration-300  text-black ${
+          className={`flex border items-center h-14 border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-sm shadow-white/50 duration-300  text-black ${
               todo.completed ? "bg-[#c6e9a7]" : "bg-[#DCD6F7]"
           }`}
       >
           <input
               type="checkbox"
-              className="cursor-pointer"
+              className="cursor-pointer w-6 h-6"
               checked={todo.completed}
               onChange={ToggleCompleted}
           />
           <input
               type="text"
-              className={`border outline-none w-full bg-transparent rounded-lg ${
+              className={`border cursor-pointer outline-none w-full text-lg bg-transparent rounded-lg ${
                   isTodoEditable ? "border-black/10 px-2" : "border-transparent"
               } ${todo.completed ? "line-through" : ""}`}
               value={todoMsg}
@@ -39,7 +39,7 @@ function TodoItem({ todo }) {
           />
           {/* Edit, Save Button */}
           <button
-              className="inline-flex w-8 h-8 rounded-lg text-sm border border-black/10 justify-center items-center bg-gray-50 hover:bg-gray-100 shrink-0 disabled:opacity-50"
+              className="inline-flex w-9 h-9 rounded-lg text-sm border border-black/10 justify-center items-center hover:scale-105 hover:focus:ring-1 bg-white  shrink-0 disabled:opacity-50"
               onClick={() => {
                   if (todo.completed) return;
 
@@ -53,7 +53,7 @@ function TodoItem({ todo }) {
           </button>
           {/* Delete Todo Button */}
           <button
-              className="inline-flex w-8 h-8 rounded-lg text-sm border border-black/10 justify-center items-center bg-gray-50 hover:bg-gray-100 shrink-0"
+              className="inline-flex w-9 h-9 rounded-lg text-sm border border-black/10 justify-center items-center bg-white hover:scale-105 hover:focus:ring-1 shrink-0"
               onClick={() => DeleteTodo(todo.id)}
           >
               ❌
